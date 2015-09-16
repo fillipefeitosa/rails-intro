@@ -10,8 +10,8 @@
       %th{:class => ("hilite" unless params[:sort] != 'release_date')}
         = link_to "Release Date", movies_path(sort: 'release_date', order: @order, ratings: params[:ratings]), {id: 'release_date_header'}
       %th More Info
-  %tbody
-  - @movies.each do |movie|
+   %tbody
+    - @movies.each do |movie|
       %tr
         %td= movie.title
         %td= movie.rating
